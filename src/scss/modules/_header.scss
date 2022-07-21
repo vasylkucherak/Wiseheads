@@ -2,18 +2,7 @@
 
 //? Шапка ===================================================================================================================================================================
 $headerPosition: fixed;  // relative / fixed
-$headerColor: #eb451c; // колір
-$headerMinHeight: 70px; // мінімальна висота
-$headerVerticalPadding: 15px; // вертикальний внутрішній відступ
-
-//? Логотип =================================================================================================================================================================
-$logoImage: #fff; // url("") center / cover no-repeat
-$logoWidth: 40px; // ширина
-$logoHeight: 40px; // висота
-
-//? Кнопки меню =============================================================================================================================================================
-$linkFontSize: 18px; // розмір шрифту
-$linkColor: #fff; // колір
+$headerColor: linear-gradient(180deg, #E47900 0%, rgba(254, 182, 16, 0) 100%); // колір
 
 //? Кнопки випадаючого списку ===============================================================================================================================================
 $sublinkFontSize: 16px; // розмір шрифту
@@ -39,53 +28,49 @@ $transitionVerticalPosition: 0; // поява панелі меню (зліва:
     top: 0;
     left: 0;
     width: 100%;
-    background-color: $headerColor;
+    background: $headerColor;
     z-index: 10;
-    &__container {
+    .container {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        min-height: $headerMinHeight;
-        padding: $headerVerticalPadding $containerPadding + px;
     }
     &__logo {
-        position: relative;
-        width: $logoWidth;
-        height: $logoHeight;
-        background: $logoImage;
         z-index: 5;
     }
 }
 .menu {
     &__list > li {
-        margin: 0 10px;
-        position: relative;
-    }
-    &__sublist {
-        padding: $sublistPadding;
-        position: absolute;
-        top: 100%;
-        right: $sublistPosition;
-        min-width: $sublistMinWidth;
-        background-color: #000;
-        li {
-            margin-bottom: $sublinkMargin;
-            &:last-child {
-                margin: 0;
-            }
+        margin: 0 25px;
+        @media (max-width: $tablet) {
+            margin: 0 15px;
+        }
+        @media (max-width: 860px) {
+            margin: 0 8px;
         }
     }
-    &__arrow {
-        display: none;
-    }
     &__link {
-        font-size: $linkFontSize;
-        color: $linkColor;
-    }
-    &__sublink {
-        font-size: $sublinkFontSize;
-        color: $sublinkColor;
+        position: relative;
+        font-size: 16px;
+        line-height: 19px;
+        color: #fff;
+        white-space: nowrap;
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            height: 2px;
+            background: #fff;
+            width: 0;
+            transition: width 0.3s;
+        }
+        &::before {
+            right: 50%;
+        }
+        &::after {
+            left: 50%;
+        }
     }
 }
 
@@ -93,74 +78,27 @@ body {
     &.lock {
         overflow: hidden;
     }
-    //* Івенти для девайсів з курсором
     &._cursor {
         .menu {
-            //* Стилізація появи випадаючого списку при наведенні на кнопку меню
-            &__list > li:hover .menu__sublist {
-                opacity: 1;
-                visibility: visible;
-                pointer-events: all;
-                transform: translate(0, 0);
-            }
-            //* Стилізація кнопок меню при наведенні
-            &__link:hover {
-                text-decoration: underline;
-            }
-            //* Стилізація кнопок випадаючого списку при наведенні
-            &__sublink:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-    //* Івенти для сенсорних девайсів
-    &._touch {
-        .menu__list > li {
-            display: flex;
-            align-items: center;
-            //* дається li при touch івенті на стрілку 
-            &.active {
-                .menu {
-                    &__sublist {
-                        height: auto;
-                        opacity: 1;
-                        visibility: visible;
-                        pointer-events: all;
-                        transform: translate(0, 0);
-                        @media (max-width: 767px) {
-                            margin-top: 15px;
-                            padding: 15px;
-                        }
-                    }
-                    //* Стилізація стрілки при touch івенті
-                    &__arrow.active {
-                        transform: rotate(-180deg);
+            &__link {
+                &:hover {
+                    &::before, &::after {
+                        width: 50%;
                     }
                 }
             }
         }
-        .menu__link {
+    }
+    &._touch {
+        .menu {
+            &__link {
             flex: 1 1 auto;
-            //* Стилізація кнопок меню при touch івенті
-            &:active {
-                text-decoration: underline;
+                &:active {
+                    &::before, &::after {
+                        width: 50%;
+                    }
+                }
             }
-        }
-        .menu__sublink {
-            //* Стилізація кнопок випадаючого списку при touch івенті
-            &:active {
-                text-decoration: underline;
-            }
-        }
-        .menu__arrow {
-            margin: 0 0 0 5px;
-            display: block;
-            width: 0;
-            height: 0;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            border-top: 10px solid #fff;
-            transition: transform .3s ease 0s;
         }
     }
 }
@@ -169,6 +107,7 @@ body {
     .menu {
         &__list {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
         }
         &__list > li {
@@ -238,7 +177,6 @@ body {
                 top: 0;
                 left: 0;
                 width: 100%;
-                height: $headerMinHeight;
                 background-color: $headerColor;
                 z-index: 2;
             }
