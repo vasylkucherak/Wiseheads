@@ -1,19 +1,36 @@
 .about {
-    padding: 45px 0 54px 0;
+    padding: 45px 0 40px 0;
     &__body {
         display: flex;
+        width: 100%;
+        @media (max-width: $tablet) {
+            justify-content: center;
+        }
     }
     &__diplom {
-        align-self: start;
+        flex: 1 1 auto;
+        align-self: center;
+        img {
+            width: 100%;
+        }
+        @media (max-width: $tablet) {
+            display: none;
+        }
     }
     &__content {
+        flex: 0 0 581px;
         display: flex;
         flex-direction: column;
-        width: 581px;
+        @media (max-width: $tablet) {
+            flex: 1 1 auto;
+        }
     }
     &__title {
         text-align: left;
         margin-bottom: 30px;
+        @media (max-width: $tablet) {
+            text-align: center;
+        }
     }
     &__descr {
         font-family: 'Balsamiq Sans';
@@ -24,14 +41,16 @@
     }
     &__icons {
         display: flex;
+        @media (max-width: 530px) {
+            flex-direction: column;
+        }
         &-item {
-            width: 202px;
-            height: 195px;
             flex: 0 0 33.333%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            margin-bottom: 15px;
             img {
                 width: 152px;
                 height: 137px;
@@ -44,6 +63,9 @@
                 line-height: 22px;
                 text-align: center;
                 color: #EB6224;
+                @media (max-width: 530px) {
+                    white-space: nowrap;
+                }
             }
             &:first-child {
                 img {
