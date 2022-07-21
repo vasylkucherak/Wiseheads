@@ -526,3 +526,27 @@ body._touch .menu__link:active::before, body._touch .menu__link:active::after {
 .about__icons-item:first-child img {
   transform: scale(1);
 }
+
+.player {
+  margin-bottom: 100px;
+}
+.player__body {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.player__wrapper {
+  width: 100%;
+  position: relative;
+  padding-bottom: 56%;
+  border: 2px solid #F47900;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.player iframe {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
