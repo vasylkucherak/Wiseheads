@@ -551,9 +551,59 @@ body._touch .menu__link:active::before, body._touch .menu__link:active::after {
   height: 100%;
 }
 
-.rubrics {
-  margin-bottom: 25px;
-}
 .rubrics img {
   width: 100%;
+}
+
+.sales {
+  padding-top: 249px;
+  padding-bottom: 200px;
+  background: url("./img/sales_bg.png") center top/cover no-repeat;
+}
+.sales__title {
+  text-align: left;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.sales__text {
+  max-width: 490px;
+  font-family: "Balsamiq Sans";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+.sales__price {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+.sales__price-item {
+  padding: 20px;
+  border: 1px dashed #FFFFFF;
+  border-radius: 20px;
+}
+.sales__price-item p {
+  font-family: "Amatic SC";
+  font-size: 84px;
+  line-height: 64px;
+}
+.sales__price-item span {
+  padding-left: 24px;
+  font-family: "Amatic SC";
+  font-size: 60px;
+  line-height: 64px;
+  text-decoration-line: line-through;
+  opacity: 0.6;
+}
+.sales__price-item div {
+  font-family: "Balsamiq Sans";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+.sales__btn {
+  color: #00c5f2;
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
 }
