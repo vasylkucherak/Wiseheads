@@ -157,6 +157,7 @@ main {
   height: 62px;
   border-radius: 50px;
   background: #FFFFFF;
+  font-family: "Balsamiq Sans";
   font-size: 18px;
   line-height: 22px;
   color: #F57F02;
@@ -189,11 +190,11 @@ body._touch .btn:active {
 .promo {
   display: flex;
   min-height: 100vh;
-  background: url("./img/promo_bg.jpg") center/cover no-repeat;
+  background: url("./img/promo_bg.jpg") center bottom/cover no-repeat;
 }
 @media (max-aspect-ratio: 1/1) {
   .promo {
-    background-position: left center;
+    background-position: left bottom;
   }
 }
 .promo .container {
@@ -232,6 +233,7 @@ body._touch .btn:active {
   }
 }
 .promo__label {
+  font-family: "Balsamiq Sans";
   line-height: 22px;
   max-width: 282px;
   text-align: left;
@@ -298,6 +300,7 @@ body._touch .btn:active {
   }
 }
 .menu__link {
+  font-family: "Balsamiq Sans";
   position: relative;
   font-size: 16px;
   line-height: 19px;
@@ -435,4 +438,57 @@ body._touch .menu__link:active::before, body._touch .menu__link:active::after {
     background-color: #fff;
     transition: all 0.3s ease;
   }
+}
+.about {
+  padding: 45px 0 54px 0;
+}
+.about__body {
+  display: flex;
+}
+.about__diplom {
+  align-self: start;
+}
+.about__content {
+  display: flex;
+  flex-direction: column;
+  width: 581px;
+}
+.about__title {
+  text-align: left;
+  margin-bottom: 30px;
+}
+.about__descr {
+  font-family: "Balsamiq Sans";
+  font-weight: 400;
+  line-height: 24px;
+  color: #eb6224;
+  margin-bottom: 30px;
+}
+.about__icons {
+  display: flex;
+}
+.about__icons-item {
+  width: 202px;
+  height: 195px;
+  flex: 0 0 33.333%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about__icons-item img {
+  width: 152px;
+  height: 137px;
+  object-fit: cover;
+  transform: scale(1.25);
+}
+.about__icons-item p {
+  font-family: "Balsamiq Sans";
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #EB6224;
+}
+.about__icons-item:first-child img {
+  transform: scale(1);
 }

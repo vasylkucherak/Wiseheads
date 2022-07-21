@@ -1,9 +1,9 @@
 .promo {
     display: flex;
     min-height: 100vh;
-    background: url('./img/promo_bg.jpg') center / cover no-repeat;
+    background: url('./img/promo_bg.jpg') center bottom / cover no-repeat;
     @media (max-aspect-ratio: 1/1) {
-        background-position: left center;
+        background-position: left bottom;
     }
     .container {
         width: 100%;
@@ -35,6 +35,7 @@
         }
     }
     &__label {
+        font-family: 'Balsamiq Sans';
         line-height: 22px;
         max-width: 282px;
         text-align: left;

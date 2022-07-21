@@ -1,0 +1,55 @@
+.about {
+    padding: 45px 0 54px 0;
+    &__body {
+        display: flex;
+    }
+    &__diplom {
+        align-self: start;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 581px;
+    }
+    &__title {
+        text-align: left;
+        margin-bottom: 30px;
+    }
+    &__descr {
+        font-family: 'Balsamiq Sans';
+        font-weight: 400;
+        line-height: 24px;
+        color: $orange-color;
+        margin-bottom: 30px;
+    }
+    &__icons {
+        display: flex;
+        &-item {
+            width: 202px;
+            height: 195px;
+            flex: 0 0 33.333%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 152px;
+                height: 137px;
+                object-fit: cover;
+                transform: scale(1.25);
+            }
+            p {
+                font-family: 'Balsamiq Sans';
+                font-size: 18px;
+                line-height: 22px;
+                text-align: center;
+                color: #EB6224;
+            }
+            &:first-child {
+                img {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
