@@ -5,13 +5,31 @@
     background: #FFFFFF;
     font-size: 18px;
     line-height: 22px;
+    color: $yellow-color;
     filter: drop-shadow(0px 0px 20px #FF9C70);
+    transition: background .3s;
+}
+body {
+    &._cursor {
+        .btn {
+            &:hover {
+                background: rgba(255, 255, 255, 0.75);
+            }
+        }
+    }
+    &._touch {
+        .btn {
+            &:active {
+                
+            }
+        }
+    }
 }
 .title {
     width: 100%;
     font-family: 'Amatic SC';
     font-size: 60px;
     line-height: 64px;
-    color: #EB6224;
+    color: $orange-color;
     text-align: center;
 }

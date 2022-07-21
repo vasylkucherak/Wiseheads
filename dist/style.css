@@ -159,14 +159,51 @@ main {
   background: #FFFFFF;
   font-size: 18px;
   line-height: 22px;
+  color: #F57F02;
   filter: drop-shadow(0px 0px 20px #FF9C70);
+  transition: background 0.3s;
 }
 
+body._cursor .btn:hover {
+  background: rgba(255, 255, 255, 0.75);
+}
 .title {
   width: 100%;
   font-family: "Amatic SC";
   font-size: 60px;
   line-height: 64px;
-  color: #EB6224;
+  color: #eb6224;
   text-align: center;
+}
+
+.promo {
+  padding: 20px 0;
+  display: flex;
+  min-height: 100vh;
+  background: url("./img/promo_bg.jpg") center/cover no-repeat;
+}
+.promo .container {
+  width: 100%;
+}
+.promo__content {
+  margin-top: 153px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 455px;
+  text-align: center;
+}
+.promo__label {
+  line-height: 22px;
+  max-width: 282px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.promo__title {
+  line-height: 64px;
+  color: #fff;
+  text-align: left;
+  margin-bottom: 30px;
 }
