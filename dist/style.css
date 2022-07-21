@@ -151,3 +151,22 @@ body {
 main {
   flex: 1 1 auto;
 }
+
+.btn {
+  width: 309px;
+  height: 62px;
+  border-radius: 50px;
+  background: #FFFFFF;
+  font-size: 18px;
+  line-height: 22px;
+  filter: drop-shadow(0px 0px 20px #FF9C70);
+}
+
+.title {
+  width: 100%;
+  font-family: "Amatic SC";
+  font-size: 60px;
+  line-height: 64px;
+  color: #EB6224;
+  text-align: center;
+}
