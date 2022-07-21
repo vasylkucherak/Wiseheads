@@ -1,0 +1,45 @@
+//! Загальні налаштування сайту
+
+//? Шрифт за замовчуванням =======================================================================================================================
+$fontFamily: "Balsamiq+Sans"; // назва
+$fontWeight: 700; // жирність
+$fontSize: 18px; // розмір
+$fontColor: #fff; // колір
+
+//? Розміри сайту ================================================================================================================================
+$minWidth: 320px; // мінімальний
+$maxWidth: 1920px; // максимальний
+
+//? Розмір контейнера ============================================================================================================================
+$maxWidthContainer: 1150; // макетна ширина контейнера (px)
+$containerPadding: 20; // внутрішні горизонтальні відступи контейнера (px)
+$maxContainerWidth: $containerPadding + $maxWidthContainer + $containerPadding; // браузерна ширина контейнера
+
+//? Брейк-поінти =================================================================================================================================
+$pc: $maxContainerWidth + px; // ПК, ноутбуки, деякі планшети в горизонтальному положенні
+$tablet: 991.98px; // планшети, деякі телефони в горизонтальному положенні
+$mobile: 767.98px; // великі телефони
+$mobileSmall: 479.98px; // малі телефони
+
+//? Базові стилі =================================================================================================================================
+@import 'base/_mixins';
+@import 'base/_animations';
+@import 'base/_null';
+@import 'base/_variables';
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Balsamiq+Sans:wght@400;700&display=swap');
+
+//? Імпорт модулів ===============================================================================================================================
+//@import 'modules/_header';
+//@import 'modules/_fullscreen+parallax';
+//@import 'modules/_swiperSlider';
+//@import 'modules/_slickSlider';
+//@import 'modules/_spoiler';
+//@import 'modules/_form';
+//@import 'modules/youtubePlayerAPI';
+//@import 'modules/_footer';
+//@import 'modules/_popup';
+//@import 'modules/_scrollUpBtn';
+//@import 'modules/_rating';
+//@import 'modules/_lazyLoading';
+//@import 'modules/_noUISlider';
+//@import 'modules/_scrollBar';
