@@ -15,8 +15,8 @@ $sublistPadding: 15px; // внутрішній відступ
 $sublistPosition: 0; // позиціювання відносно краю кнопки меню (лівого: auto / правого: 0)
 
 //? Бургер ==================================================================================================================================================================
-$burgerWidth: 30px;
-$burgerHeight: 18px;
+$burgerWidth: 34px;
+$burgerHeight: 20px;
 $burgerColor: #fff; //колір
 
 //? Панель меню (max-width: 767px) ==========================================================================================================================================
@@ -38,6 +38,11 @@ $transitionVerticalPosition: 0; // поява панелі меню (зліва:
     }
     &__logo {
         z-index: 5;
+        img {
+            @media (max-width: $mobile) {
+                width: 174px;
+            }
+        }
     }
 }
 .menu {
@@ -113,18 +118,12 @@ body {
         &__list > li {
             padding: 10px 0;
         }
-        &__sublist {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-            transform: translate(0, 10%);
-            transition: all .3s ease;
-        }
     }
 }
 @media (max-width: 767px) {
     .menu {
         &__burger {
+            margin-right: 10px;
             position: relative;
             display: block;
             width: $burgerWidth;
@@ -149,78 +148,74 @@ body {
                 }
                 &::before {
                     top: 50%;
-                    transform: rotate(-45deg) translate(3%, -20%);
+                    transform: rotate(-45deg) translate(5%, -20%);
                 }
                 &::after {
                     bottom: 50%;
-                    transform: rotate(45deg) translate(3%, 20%);
+                    transform: rotate(45deg) translate(5%, 20%);
                 }
             }
         }
         &__body {
-            padding: 100px 30px 30px 30px;
+            padding-top: 100px;
             position: fixed;
             top: $transitionHorizontalPosition;
             left: $transitionVerticalPosition;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, .95);
+            background-color: rgba(255, 169, 0, .9);
             transition: all .3s ease;
             overflow: auto;
             &.active {
                 left: 0;
                 top: 0;
+                &::before {
+                    display: block;
+                }
             }
             &::before {
+                display: none;
                 content: '';
                 position: fixed;
                 top: 0;
                 left: 0;
                 width: 100%;
-                background-color: $headerColor;
-                z-index: 2;
+                height: 100px;
+                background-color: rgb(255, 169, 0);
+                z-index: 4;
+                border-bottom: 1px solid #FFFFFF;
+                
             }
         }
         &__list {
             width: 100%;
         }
         &__list > li {
-            margin: 0 0 30px 0;
+            width: calc(100% - 20px);
             flex-wrap: wrap;
-            &:last-child {
-                margin-bottom: 0;
-            }
+            text-align: center;
+            border-bottom: 1px solid #FFFFFF;
             &.active {
                 .menu {
                     display: block;
                 }
             }
         }
-        &__sublist {
-            padding: 0;
-            position: relative;
-            flex: 1 1 100%;
-            background-color: #fff;
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-            transform: translate(0, 10%);
-            height: 0;
-            transition: all .3s ease;
-        }
         &__link {
+            width: 100%;
+            display: block;
+            padding: 30px 0;
+            font-family: 'Balsamiq Sans';
             font-size: 24px;
-        }
-        &__sublink {
-            font-size: 20px;
-            color: #000;
+            line-height: 29px;
         }
     }
     .menu__burger span, .menu__burger::before, .menu__burger::after {
         position: absolute;
         left: 0;
-        height: 10%;
+        height: 4px;
         width: 100%;
+        border-radius: 5px;
         background-color: $burgerColor;
         transition: all .3s ease;
     }
