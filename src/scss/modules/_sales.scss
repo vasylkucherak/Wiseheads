@@ -2,10 +2,27 @@
     padding-top: 249px;
     padding-bottom: 200px;
     background: url('./img/sales_bg.png') center top / cover no-repeat;
+    @media (max-width: $tablet) {
+        background-position: 70% top;
+    }
+    @media (max-width: $mobile) {
+        background-position: left top;
+    }
     &__title {
         text-align: left;
         color: #fff;
         margin-bottom: 20px;
+        @media (max-width: $mobile) {
+            text-align: center;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        @media (max-width: $mobile) {
+            align-items: center;
+            text-align: center;
+        }
     }
     &__text {
         max-width: 490px;
@@ -19,6 +36,10 @@
         display: flex;
         gap: 20px;
         margin-bottom: 32px;
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            max-width: 355px;
+        }
         &-item {
             padding: 20px;
             border: 1px dashed #FFFFFF;
@@ -27,6 +48,9 @@
                 font-family: 'Amatic SC';
                 font-size: 84px;
                 line-height: 64px;
+                @media (max-width: 390px) {
+                    font-size: 64px;
+                }
             }
             span {
                 padding-left: 24px;
@@ -35,6 +59,9 @@
                 line-height: 64px;
                 text-decoration-line: line-through;
                 opacity: 0.6;
+                @media (max-width: 390px) {
+                    font-size: 50px;
+                }
             }
             div {
                 font-family: 'Balsamiq Sans';
