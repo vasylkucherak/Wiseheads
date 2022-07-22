@@ -67,10 +67,9 @@ export default function swiperSlider() {
         },
         //? Адаптив слайдера (mobile first)
         breakpoints: {
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 0,
-                autoHeight: true,
+            0: {
+                slidesPerView: 1.3,
+                spaceBetween: 140,
             },
             500: {
                 slidesPerView: 1.75,
@@ -78,7 +77,7 @@ export default function swiperSlider() {
             },
             768: {
                 slidesPerView: 2,
-                spaceBetween: 170,
+                spaceBetween: 140,
             },
             992: {
                 slidesPerView: 2.5,
