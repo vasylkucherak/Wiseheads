@@ -659,12 +659,10 @@ button.swiper-pagination-bullet {
     }
     &::before {
         left: 0;
-        //background: #ccc;
         background: linear-gradient(to right, #fff, transparent);
     }
     &::after {
         right: 0;
-        //background: #ccc;
         background: linear-gradient(to left, #fff, transparent);
     }
     &-slide {
@@ -709,12 +707,6 @@ button.swiper-pagination-bullet {
             font-weight: 400;
             font-size: 14px;
             line-height: 170%;
-        }
-    }
-    &-button {
-        &-prev {
-        }
-        &-next {
         }
     }
 }
