@@ -1713,10 +1713,20 @@ body._touch .cooperation__btn:active {
   text-align: left;
   margin-bottom: 26px;
 }
+@media (max-width: 767.98px) {
+  .footer__title {
+    text-align: center;
+  }
+}
 .footer__info {
   display: flex;
   gap: 46px;
   margin-bottom: 44px;
+}
+@media (max-width: 767.98px) {
+  .footer__info {
+    flex-direction: column;
+  }
 }
 .footer__info-block {
   font-family: "Balsamiq Sans";
@@ -1727,6 +1737,11 @@ body._touch .cooperation__btn:active {
 }
 .footer__info-block:first-child {
   min-width: 386px;
+}
+@media (max-width: 767.98px) {
+  .footer__info-block:first-child {
+    min-width: auto;
+  }
 }
 .footer__info-block a {
   color: #0071f2;

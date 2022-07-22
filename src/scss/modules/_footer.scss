@@ -5,11 +5,17 @@
         color: #fff;
         text-align: left;
         margin-bottom: 26px;
+        @media (max-width: $mobile) {
+            text-align: center;
+        }
     }
     &__info {
         display: flex;
         gap: 46px;
         margin-bottom: 44px;
+        @media (max-width: $mobile) {
+            flex-direction: column;
+        }
         &-block {
             font-family: 'Balsamiq Sans';
             font-weight: 700;
@@ -18,6 +24,9 @@
             color: #FFFFFF;
             &:first-child {
                 min-width: 386px;
+                @media (max-width: $mobile) {
+                    min-width: auto;
+                }
             }
             a {
                 color: #0071f2;
