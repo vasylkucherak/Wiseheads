@@ -1,17 +1,29 @@
 .journal {
-    padding: 100px 0;
+    padding: 110px 0;
     background: url('./img/journal_bg.png') center top / cover no-repeat;
     &__body {
         display: flex;
         align-items: center;
+        @media (max-width: $tablet) {
+            flex-direction: column-reverse;
+            max-width: 656px;
+            margin: 0 auto;
+        }
     }
     &__content {
         width: 656px;
         min-width: 656px;
+        @media (max-width: $tablet) {
+            width: 100%;
+            min-width: 300px;
+        }
     }
     &__title {
         margin-bottom: 25px;
         text-align: left;
+        @media (max-width: $tablet) {
+            text-align: center;
+        }
     }
     &__descr {
         color: $orange-color;
@@ -27,11 +39,20 @@
             }
         }
     }
+    &__btn {
+        @media (max-width: $tablet) {
+            display: block;
+            margin: 0 auto;
+        }
+    }
     &__img {
         flex: 1 1 auto;
         img {
             width: 100%;
             object-fit: cover;
+        }
+        @media (max-width: $tablet) {
+            max-width: 440px;
         }
     }
 }
