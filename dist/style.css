@@ -294,9 +294,9 @@ body._touch .btn:active {
     margin: 0 15px;
   }
 }
-@media (max-width: 860px) {
+@media (max-width: 870px) {
   .menu__list > li {
-    margin: 0 8px;
+    margin: 0 6px;
   }
 }
 .menu__link {
@@ -647,4 +647,59 @@ body._touch .menu__link:active::before, body._touch .menu__link:active::after {
 .sales__btn {
   color: #00c5f2;
   box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
+}
+
+.download__body {
+  display: flex;
+  align-items: center;
+}
+.download__img {
+  flex: 1 1 auto;
+}
+.download__img img {
+  width: 100%;
+  object-fit: cover;
+}
+.download__form {
+  flex: 0 0 490px;
+  margin-bottom: 100px;
+}
+.download__title {
+  text-align: left;
+  margin-bottom: 30px;
+}
+.download__input {
+  width: 350px;
+  height: 62px;
+  border: 2px solid #EB6224;
+  border-radius: 50px;
+  text-align: center;
+  font-family: "Balsamiq Sans";
+  font-size: 18px;
+  line-height: 22px;
+  color: rgb(235, 98, 36);
+  margin-bottom: 13px;
+}
+.download__input::placeholder {
+  /* font-family: 'Balsamiq Sans';
+  font-size: 18px;
+  line-height: 22px; */
+  color: rgba(235, 98, 36, 0.4);
+}
+.download__input:focus::placeholder {
+  font-size: 0;
+}
+.download__btn {
+  margin-top: 10px;
+  width: 350px;
+  filter: drop-shadow(0px 0px 20px #FF9C70);
+  background: #eb6224;
+  color: #fff;
+}
+
+body._cursor .download__btn:hover {
+  background: rgba(235, 98, 36, 0.75);
+}
+body._touch .download__btn:active {
+  background: rgba(235, 98, 36, 0.75);
 }
