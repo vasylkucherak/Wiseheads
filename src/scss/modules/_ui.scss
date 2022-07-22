@@ -12,6 +12,15 @@
     @media (max-width: 500px) {
         width: 290px;
     }
+    &_2 {
+        width: 350px;
+        filter: drop-shadow(0px 0px 20px #FF9C70);
+        background: $orange-color;
+        color: #fff;
+        @media (max-width: 370px) {
+            width: 100%;
+        }
+    }
 }
 body {
     &._cursor {
@@ -19,12 +28,22 @@ body {
             &:hover {
                 background: rgba(255, 255, 255, 0.75);
             }
+            &_2 {
+                &:hover {
+                    background: rgba(235, 98, 36, 0.75);
+                }
+            }
         }
     }
     &._touch {
         .btn {
             &:active {
                 background: rgba(255, 255, 255, 0.75);
+            }
+            &_2 {
+                &:active {
+                    background: rgba(235, 98, 36, 0.75);
+                }
             }
         }
     }

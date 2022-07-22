@@ -1,0 +1,37 @@
+.journal {
+    padding: 100px 0;
+    background: url('./img/journal_bg.png') center top / cover no-repeat;
+    &__body {
+        display: flex;
+        align-items: center;
+    }
+    &__content {
+        width: 656px;
+        min-width: 656px;
+    }
+    &__title {
+        margin-bottom: 25px;
+        text-align: left;
+    }
+    &__descr {
+        color: $orange-color;
+        font-family: 'Balsamiq Sans';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 25px;
+        ul {
+            li {
+                list-style: disc;
+                margin-left: 18px;
+            }
+        }
+    }
+    &__img {
+        flex: 1 1 auto;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}

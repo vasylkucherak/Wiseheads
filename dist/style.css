@@ -169,12 +169,29 @@ main {
     width: 290px;
   }
 }
+.btn_2 {
+  width: 350px;
+  filter: drop-shadow(0px 0px 20px #FF9C70);
+  background: #eb6224;
+  color: #fff;
+}
+@media (max-width: 370px) {
+  .btn_2 {
+    width: 100%;
+  }
+}
 
 body._cursor .btn:hover {
   background: rgba(255, 255, 255, 0.75);
 }
+body._cursor .btn_2:hover {
+  background: rgba(235, 98, 36, 0.75);
+}
 body._touch .btn:active {
   background: rgba(255, 255, 255, 0.75);
+}
+body._touch .btn_2:active {
+  background: rgba(235, 98, 36, 0.75);
 }
 
 .title {
@@ -701,6 +718,7 @@ body._touch .menu__link:active::before, body._touch .menu__link:active::after {
   line-height: 22px;
   color: rgb(235, 98, 36);
   margin-bottom: 13px;
+  padding: 0 10px;
 }
 @media (max-width: 370px) {
   .download__input {
@@ -718,20 +736,40 @@ body._touch .menu__link:active::before, body._touch .menu__link:active::after {
 }
 .download__btn {
   margin-top: 10px;
-  width: 350px;
-  filter: drop-shadow(0px 0px 20px #FF9C70);
-  background: #eb6224;
-  color: #fff;
-}
-@media (max-width: 370px) {
-  .download__btn {
-    width: 100%;
-  }
 }
 
-body._cursor .download__btn:hover {
-  background: rgba(235, 98, 36, 0.75);
+.journal {
+  padding: 100px 0;
+  background: url("./img/journal_bg.png") center top/cover no-repeat;
 }
-body._touch .download__btn:active {
-  background: rgba(235, 98, 36, 0.75);
+.journal__body {
+  display: flex;
+  align-items: center;
+}
+.journal__content {
+  width: 656px;
+  min-width: 656px;
+}
+.journal__title {
+  margin-bottom: 25px;
+  text-align: left;
+}
+.journal__descr {
+  color: #eb6224;
+  font-family: "Balsamiq Sans";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 25px;
+}
+.journal__descr ul li {
+  list-style: disc;
+  margin-left: 18px;
+}
+.journal__img {
+  flex: 1 1 auto;
+}
+.journal__img img {
+  width: 100%;
+  object-fit: cover;
 }

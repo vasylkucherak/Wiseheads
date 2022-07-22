@@ -45,6 +45,7 @@
         line-height: 22px;
         color: rgb(235, 98, 36);
         margin-bottom: 13px;
+        padding: 0 10px;
         @media (max-width: 370px) {
             width: 100%;
         }
@@ -60,36 +61,7 @@
             }
         }
     }
-    &__link {
-    }
     &__btn {
         margin-top: 10px;
-        width: 350px;
-        filter: drop-shadow(0px 0px 20px #FF9C70);
-        background: $orange-color;
-        color: #fff;
-        @media (max-width: 370px) {
-            width: 100%;
-        }
-    }
-}
-body {
-    &._cursor {
-        .download {
-            &__btn {
-                &:hover {
-                    background: rgba(235, 98, 36, 0.75);
-                }
-            }
-        }
-    }
-    &._touch {
-        .download {
-            &__btn {
-                &:active {
-                    background: rgba(235, 98, 36, 0.75);
-                }
-            }
-        }
     }
 }
