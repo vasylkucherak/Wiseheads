@@ -7,23 +7,9 @@ import touchOrCursor from "./modules/_touchOrCursor.js"; //? Перевірка 
 //? Додаткові скрипти =================================================================================================================================
 import headerMenu from "./modules/_headerMenu.js"; //? Меню шапки
 import download from "./modules/_download.js"; //? Меню шапки
-//import spoiler from "./modules/_spoiler.js"; //? Спойлер (або акордіон)
 import swiperSlider from "./modules/_swiperSlider.js" //? Слайдер Swiper
-//import slickSlider from "./modules/_slickSlider.js" //? Слайдер Slick
-//import form from "./modules/_form.js"; //? Форма
 import popup from "./modules/_popup.js"; //? Модальне вікно
 import scrollOnLinks from "./modules/_scrollOnLinks.js"; //? Плавний скрол при при переході по ссилці
-//import scrollUpBtn from "./modules/_scrollUpBtn.js"; //? Скрол на початок сайту при кліці на кнопку вверх
-//import animationByScroll from "./modules/_animationByScroll.js"; //? Спрацювання анімації при скролі
-//import slideUpDownToggle from "./modules/_slideUpDownToggle.js"; //? Створення анімацій slideUp, slideDown і slideToggle як у jQuery
-//import dynamicAdaptive from "./modules/_dynamicAdaptive.js"; //? Динамічний адаптив
-//import ratings from "./modules/_ratings.js"; //? зірковий рейтинг
-//import lazyLoading from "./modules/_lazyLoading.js"; //? Лінива загрузка
-//import noUISlider from "./modules/_noUISlider.js"; //? бігунок
-//import scrollBar from "./modules/_scrollBar.js"; //? Індикатор прокрутки
-
-//? Скрипти для модулів =================================================================================================================================
-//import {_slideUp, _slideDown, _slideToggle} from "./modules/_slideUpDownToggle.js"; //? Створення анімацій slideUp, slideDown і slideToggle як у jQuery
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -35,20 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     download();
 
-    /* spoiler({
-        spoilerTrigger: '.spoiler__header',
-        acordion: false
-    }); */
-
     swiperSlider();
-
-    //slickSlider();
-
-    /* form({
-        formId: 'form',
-        imageInputId: 'formImage',
-        previewId: 'formPreview'
-    }); */
 
     popup({
         triggersSelector: '[data-popup]',
@@ -65,24 +38,4 @@ document.addEventListener('DOMContentLoaded', function() {
         linksAttribue: '[href^="#"]',
         scrollSpeed: 0.3
     });
-
-    /* scrollUpBtn({
-        breakpoint: 1650
-    }); */
-
-    //animationByScroll();
-
-    //slideUpDownToggle();
-
-    /* dynamicAdaptive({
-        type: "max"
-    }); */
-
-    //ratings();
-
-    //lazyLoading();
-
-    //noUISlider();
-
-    //scrollBar();
 });
