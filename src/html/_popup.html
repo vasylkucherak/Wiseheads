@@ -1,0 +1,55 @@
+<div class="popup">
+        <div class="popup__dialog">
+            <form action="#">
+                <div class="popup__close" data-close>&times;</div>
+                <h2 class="popup__title title">Оформлення передплати</h2>
+
+                <div class="popup__block">
+                    <div class="popup__column">
+                        <div class="popup__label">Період передплати</div>
+                        <select name="period" class="popup__select popup__select_small" required placeholder="Виберіть період*">
+                            <option value="264">4 місяці</option>
+                            <option value="455">7 місяців</option>
+                            <option value="600">10 місяців</option>
+                            <option value="708">12 місяців</option>
+                        </select>
+
+                        <div class="popup__label">Особисті дані</div>
+                        <input type="text" class="popup__input" name="surname" placeholder="Прізвище*" autocomplete="off" required>
+                        <input type="text" class="popup__input" name="name" placeholder="І'мя*" autocomplete="off" required>
+                        <input type="text" class="popup__input" name="patronymic" placeholder="По батькові*" autocomplete="off" required>
+                        <input type="text" class="popup__input" name="phone" placeholder="Номер телефону*" autocomplete="off" required>
+                        <input type="email" class="popup__input" name="email" placeholder="Email*" autocomplete="off" required>
+                    </div>
+
+                    <div class="popup__column">
+                        <div class="popup__label">Адреса передплати</div>
+                        <input type="text" class="popup__input" name="region" placeholder="Область*" autocomplete="off" required>
+                        <input type="text" class="popup__input" name="area" placeholder="Район" autocomplete="off">
+                        <input type="number" class="popup__input" name="index" placeholder="Індекс*" autocomplete="off" required>
+                        <input type="text" class="popup__input" name="residence" placeholder="Місто/Село*" autocomplete="off">
+                        <div class="popup__address">
+                            <input type="text" class="popup__input popup__address-input" name="residence" placeholder="Вулиця*" autocomplete="off">
+                            <input type="text" class="popup__input popup__address-input" name="residence" placeholder="буд*" autocomplete="off">
+                            <input type="text" class="popup__input popup__address-input" name="residence" placeholder="кв" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popup__checkbox checkbox">
+                    <input id="formAggreement" type="checkbox" name="agreement" class="checkbox__input _req">
+                    <label for="formAggreement" class="checkbox__label"><span>Я ознайомився з <a href="#">договором</a> та <a href="#">умовами</a> оформлення передплати на сайті</span></label>
+                </div>
+
+                <div class="popup__block">
+                    <div class="popup__column">
+                        <div class="popup__sum">Сума до сплати:  <span class="sum"></span></div>
+                    </div>
+                    <div class="popup__column">
+                        <button type="submit" class="popup__btn btn btn_2">Оформити</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- <button data-popup class="btn">Click me</button> -->

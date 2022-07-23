@@ -7,6 +7,15 @@ export default function popup({triggersSelector, popupSelector, closeSelector, d
     const triggers = document.querySelectorAll(triggersSelector); // кнопки, котрі активують модальне вікно
     const popup = document.querySelector(popupSelector); // модальне вікно
     const close = document.querySelector(closeSelector); // кнопка, котра закриває модальне вікно
+    const header = document.querySelector('.header');
+    const selector = document.querySelector('.popup__select');
+    const sum = document.querySelector('.sum');
+
+    changePrice();
+    selector.addEventListener('change', changePrice);
+    function changePrice() {
+        sum.innerHTML = `${selector.value} грн`;
+    }
 
     for (let i = 0; i < triggers.length; i++) {
         const trigger = triggers[i];
@@ -57,12 +66,14 @@ export default function popup({triggersSelector, popupSelector, closeSelector, d
         document.querySelector(selector).style.display = "flex";
         document.body.style.overflow = "hidden";
         document.body.style.paddingRight = `${scroll}px`;
+        header.style.paddingRight = `${scroll}px`;
     }
 
     function closePopup(selector) {
         document.querySelector(selector).style.display = "none";
         document.body.style.overflow = "";
         document.body.style.paddingRight = `0px`;
+        header.style.paddingRight = `0px`;
     }
 
     function calcScroll() {
