@@ -3,10 +3,10 @@
     padding-bottom: 200px;
     background: url('./img/sales_bg.png') center top / cover no-repeat;
     @media (max-width: $tablet) {
-        background-position: 70% top;
+        background: url('./img/sales_bg.png') 70% top / cover no-repeat;
     }
     @media (max-width: $mobile) {
-        background-position: left top;
+        background: url('./img/sales_bg.png') left top / cover no-repeat;
     }
     &__title {
         text-align: left;

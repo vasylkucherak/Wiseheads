@@ -1,9 +1,9 @@
-.promo {
+.promo, .webp .promo {
     display: flex;
     min-height: 100vh;
     background: url('./img/promo_bg.jpg') center bottom / cover no-repeat;
     @media (max-aspect-ratio: 1/1) {
-        background-position: left bottom;
+        background: url('./img/promo_bg.jpg') left bottom / cover no-repeat;
     }
     .container {
         width: 100%;
